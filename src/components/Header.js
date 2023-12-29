@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import NetflixIcon from "../utils/images/red profile icon.jpg";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
@@ -16,12 +15,12 @@ const Header = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
-        dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
+        dispatch(addUser({ uid, email, displayName, photoURL }));
         navigate("/browse");
       } else {
         // User is signed out
         dispatch(removeUser());
-        navigate("/")
+        navigate("/");
       }
     });
 
@@ -35,22 +34,22 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img
-        className="w-40"
-        src={ LOGO } 
-        alt="logo"
-      />
-      <div className="flex">
+    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between items-center">
+      <img className="w-40" src={LOGO} alt="logo" />
+      <div className="flex items-center">
         {user && (
           <>
             <img
               src={user.photoURL}
               alt="icon"
-              className="w-16 h-16 p-2 rounded-sm"
-              style={{ borderRadius: "20%" }}
+              className="w-11 h-11 rounded-sm text-white border border-white mr-2"
             />
-            <button onClick={handleSignOut}>Sign Out</button>
+            <button
+              onClick={handleSignOut}
+              className="text-white hover:text-gray-300"
+            >
+              Sign Out
+            </button>
           </>
         )}
       </div>
