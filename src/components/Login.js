@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import {addUser} from "../utils/userSlice";
-import {NetflixBG} from "../utils/constant"
+import {NetflixBG} from "../utils/constant";
 import USER_AVATAR from "../utils/images/red profile icon.jpg";
 
 

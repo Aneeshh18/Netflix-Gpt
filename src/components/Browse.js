@@ -10,9 +10,11 @@ import useTvTrending from "../utils/hooks/useTvTrending";
 import useAiringTvShow from "../utils/hooks/useAiringTvShow";
 import usePopularTvShow from "../utils/hooks/usePopularTvShow";
 import useTopRatedTvShow from "../utils/hooks/useTopRatedTvShow";
-
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   useNowPlayingMovies();
   addPopularMovies();
   useTopRatedMovie();
@@ -25,8 +27,14 @@ const Browse = () => {
   return (
     <>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </>
   );
 };
