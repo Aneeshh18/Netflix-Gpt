@@ -5,7 +5,7 @@ const GptMovieSuggestionList = ({ title, movies }) => {
   console.log(title, movies);
   return (
     <div className="py-1 p-4 bg-black bg-opacity-60">
-      <h1 className="md:text-2xl font-semibold p-2 text-2xl text-white">
+      <h1 className="md:text-2xl font-semibold p-2 text-xl text-white">
         {title}
       </h1>
       <div className="flex p-2 flex-row overflow-x-scroll overflow-hidden scrollbar">

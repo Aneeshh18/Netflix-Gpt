@@ -8,10 +8,9 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
-import {addUser} from "../utils/userSlice";
-import {NetflixBG} from "../utils/constant";
+import { addUser } from "../utils/userSlice";
+import { NetflixBG } from "../utils/constant";
 import USER_AVATAR from "../utils/images/red profile icon.jpg";
-
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -89,18 +88,20 @@ const Login = () => {
     setIsSignIn(!isSignIn);
   };
   return (
-    <div>
+    <div className="">
       <Header />
-      <div className="absolute ">
+      <div className="absolute inset-0 ">
         <img
+          className="w-full h-full object-cover bg-gradient-to-b from-black z-10"
           src={NetflixBG}
           alt="bg-img"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
       </div>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="bg-black opacity-[0.87] absolute w-3/12 p-12 m-36 mx-auto right-0 left-0 text-white"
+        className="w-full bg-black opacity-[0.87] absolute md:w-3/12 p-12 m-36 mx-auto right-0 left-0 text-white"
       >
         <h1 className="font-bold text-3xl py-4">
           {isSignIn ? "Sign In" : "Sign Up"}

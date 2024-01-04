@@ -49,21 +49,20 @@ const GptSearchBar = () => {
     }
 
     return (
-        <div className="flex justify-center p-[10%] ">
+        <div className="flex justify-center md:p-[10%] p-[40%]">
             <form
                 onClick={(e) => e.preventDefault()}
                 className="flex justify-center gap-3"
             >
-                {/* <h1 className='text-white mt-3'>GPT - Movie Suggestion Search </h1> */}
 
                 <input
                     ref={searchText}
                     type="text"
-                    className="ml-10 px-3 font-body font-normal text-black w-[450px] h-12 rounded-md"
+                    className="w-max md:ml-10 md:mt-0 p-3 font-body font-normal text-black md:w-[450px] h-12 rounded-md mt-10"
                     placeholder={lang[langKey].gptSearchPlaceholder}
                 />
 
-                <button className="bg-red-600 text-white px-12 h-12 rounded-md hover:bg-red-800"
+                <button className="bg-red-600 text-white sm:w-10 md:w-24 px-2 md:px-5 flex items-center justify-center rounded-md hover:bg-red-800 mt-10 md:mt-0"
                     onClick={handleGptSearchClick}
                 >
                     {loading && (
