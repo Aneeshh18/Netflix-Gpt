@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Netflix GPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movies recomandation with AI.
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+- Install react app using create-react-app (CRA)
 
-### `npm start`
+```js
+npx create-react-app netflix-gpt
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Create `.env` file and put configure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```js
+REACT_APP_BASE_URL = YOUR_APPLICATION_BASE_URL; 
+REACT_APP_OPENAI_KEY = YOUR_API_KEY_WILL_HERE;
+REACT_APP_TMDB_KEY = YOUR_API_KEY_WILL_HERE;
+```
 
-### `npm test`
+- Install and init tailwind css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+npm install -D tailwindcss
+npx tailwindcss init
+```
 
-### `npm run build`
+- Configure tailwind css in your project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  `npx tailwindcss init` command will create a file `tailwind.config.js` in your project's root directory.
+  Open `tailwind.config.js` and replace all content with below code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
 
-### `npm run eject`
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Now you created a react app with tailwind css successfully. Now run the below command on your terminal to start your local development server.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Home Page (is user !authorised)
 
-## Learn More
+  - Signin/Signup Page
+    - SignInForm / SignUpForm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Browse Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Navbar
+  - Showcase
+  - Trendings
+  - MoviesSuggestion
+    - MoviesList \* N
 
-### Code Splitting
+- NetflixGPT
+  - Search
+  - MoviesSuggestion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 🙏 Thank You 🙏
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to modify it to suit the tone and style of your project. The goal is to encourage participation, collaboration, and learning.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ and React.
