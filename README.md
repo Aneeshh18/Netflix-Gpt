@@ -74,6 +74,15 @@ npm start
   - Search
   - MoviesSuggestion
 
+## Screen Shot
+
+- Home Page
+![Screenshot (59)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/a7f09e07-9423-47c6-8513-4247ef588699)
+
+- Search Page
+![Screenshot (61)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/f9e29d8c-9c91-4da1-85a8-ed0760767831)
+
+
 
 ## 🙏 Thank You 🙏
 
