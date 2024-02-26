@@ -77,10 +77,10 @@ npm start
 ## Screen Shot
 
 - Home Page
-![Screenshot (59)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/a7f09e07-9423-47c6-8513-4247ef588699)
+![Screenshot (59)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/2e5825a9-31ce-4217-843a-9437b781cfcc)
 
 - Search Page
-![Screenshot (61)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/f9e29d8c-9c91-4da1-85a8-ed0760767831)
+![Screenshot (61)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/c964e284-0295-4a36-8af2-fdb2e54b1c20)
 
 
 
