@@ -13,7 +13,7 @@ npx create-react-app netflix-gpt
 - Create `.env` file and put configure
 
 ```js
-REACT_APP_BASE_URL = YOUR_APPLICATION_BASE_URL; 
+REACT_APP_BASE_URL = YOUR_APPLICATION_BASE_URL;
 REACT_APP_OPENAI_KEY = YOUR_API_KEY_WILL_HERE;
 REACT_APP_TMDB_KEY = YOUR_API_KEY_WILL_HERE;
 ```
@@ -74,15 +74,13 @@ npm start
   - Search
   - MoviesSuggestion
 
-## Screen Shot
+<!-- ## Screen Shot
 
 - Home Page
 ![Screenshot (59)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/2e5825a9-31ce-4217-843a-9437b781cfcc)
 
 - Search Page
-![Screenshot (61)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/c964e284-0295-4a36-8af2-fdb2e54b1c20)
-
-
+![Screenshot (61)](https://github.com/Aneeshh18/Netflix-Gpt/assets/88325646/c964e284-0295-4a36-8af2-fdb2e54b1c20) -->
 
 ## 🙏 Thank You 🙏
 
